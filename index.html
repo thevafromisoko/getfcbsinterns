@@ -9,6 +9,20 @@
     <meta property="og:description" content="Unlock Skilled Talent. Empower the Next Generation with Frangipani Concrete Business School.">
     <meta property="og:type" content="website">
     <title>Hire Skilled Interns — FCBS Graduates Ready for Immediate Impact</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="canonical" href="https://getfcbsinterns.frangipanigroup.com.ng">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6F6BMT05R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z6F6BMT05R');
+</script>
+
+
     <style>
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #Fcfdfc; color: #0a100d; }
         .container { max-width: 1200px; margin: auto; padding: 20px; background: #fff; }
@@ -94,8 +108,8 @@
     <h1>Unlock Skilled Talent. Empower the Next Generation.</h1>
     <p>Host professionally trained FCBS graduates as interns — at no cost to your organization.</p>
     <div class="cta-buttons">
-        <a href="docs/FCBS_Internship_Proposal.pdf" target="_blank">Download FCBS Internship Proposal</a>
-        <a href="https://calendly.com/fcbs-internships/consult" target="_blank">Book a Discovery Call</a>
+        <a href="docs/FCBS_Internship_Proposal.pdf" target="_blank" rel="noopener">Download FCBS Internship Proposal</a>
+        <a href="https://calendly.com/fcbs-internships/consult" target="_blank" rel="noopener">Book a Discovery Call</a>
     </div>
 </header>
 
@@ -142,16 +156,26 @@
     </section>
 
     <section class="section">
-        <h2>What Partners Are Saying</h2>
+        <h2>Proven Results</h2>
         <div class="features">
-            <div class="feature-box">
-                “Our intern from FCBS was productive from day one. We’ve since hired them full-time!”<br><strong>– Eze, Site Manager</strong>
-            </div>
-            <div class="feature-box">
-                “A seamless experience. The FCBS team provided regular support and check-ins.”<br><strong>– Dr. Aliyu, Hospital Administrator</strong>
-            </div>
+          <div class="feature-box">
+            <strong>75% Intern-to-Staff Conversion</strong><br>
+            Most interns are hired or retained after their program.
+          </div>
+          <div class="feature-box">
+            <strong>20+ Organizations Served</strong><br>
+            Including construction, healthcare, logistics & tech companies.
+          </div>
         </div>
-    </section>
+      </section>      
+
+      <section class="section" id="testimonials">
+        <h2>What Partners Are Saying</h2>
+        <div class="feature-box" id="testimonial-box">
+          <blockquote id="testimonial-text">“Our intern from FCBS was productive from day one. We’ve since hired them full-time!”</blockquote>
+          <p><strong id="testimonial-author">– Eze, Site Manager</strong></p>
+        </div>
+      </section>
 
     <section class="section faq-section">
         <h2>Frequently Asked Questions</h2>
@@ -162,13 +186,15 @@
 
     <section class="section partner-logos">
         <h2>Trusted By Forward-Thinking Organizations</h2>
-        <img src="images/logo3.png" alt="Partner 1">
-        <img src="images/logo2.png" alt="Partner 2">
+        <img src="images/avgalogo.png" alt="AVGA Logo">
+        <img src="images/francleanlogo.png" alt="Franclean Logo">
+        
     </section>
 
     <section class="section">
         <h2>Register Your Interest</h2>
         <form class="contact-form" action="https://formspree.io/f/xqaqewaq" method="POST">
+            <input type="hidden" name="_redirect" value="https://getfcbsinterns.frangipanigroup.com.ng/thank-you.html">
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Work Email" required>
             <input type="text" name="organization" placeholder="Organization Name" required>
@@ -190,16 +216,43 @@
 
 <section class="cta-section">
     <h2>Let’s Get Started</h2>
-    <a href="/docs/FCBS_Internship_Proposal.pdf" target="_blank">Download Full Proposal</a>
-    <a href="https://calendly.com/fcbs-internships/consult" target="_blank">Talk to Our Program Coordinator</a>
+    <a href="/docs/FCBS_Internship_Proposal.pdf" target="_blank" rel="noopener">Download Full Proposal</a>
+    <a href="https://calendly.com/fcbs-internships/consult" target="_blank" rel="noopener">Talk to Our Program Coordinator</a>
 </section>
 
 <footer>
     <p><strong>Francis David Matthew</strong> – Program Coordinator, FCBS</p>
     <p>📞 +2349099998301 | +2349099998302</p>
-    <p>📧 info@frangipanigroup.com.ng | 🌐 www.frangipanigroup.com.ng</p>
-    <p><a class="whatsapp-link" href="https://wa.me/2349099998301" target="_blank">Chat with us on WhatsApp</a></p>
+    <p>📧 getfcbsinterns@frangipanigroup.com.ng | 🌐 www.frangipanigroup.com.ng</p>
+    <p><a class="whatsapp-link" href="https://wa.me/2349099998301" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
 </footer>
 
+<script>
+    const testimonials = [
+      {
+        text: "“Our intern from FCBS was productive from day one. We’ve since hired them full-time!”",
+        author: "– Eze, Site Manager"
+      },
+      {
+        text: "“A seamless experience. The FCBS team provided regular support and check-ins.”",
+        author: "– Dr. Aliyu, Hospital Administrator"
+      },
+      {
+        text: "“Excellent communication, dependable interns, and a very supportive coordination team.”",
+        author: "– Juliet, HR Lead at DraxBuild"
+      }
+    ];
+  
+    let index = 0;
+    const textEl = document.getElementById("testimonial-text");
+    const authorEl = document.getElementById("testimonial-author");
+  
+    setInterval(() => {
+      index = (index + 1) % testimonials.length;
+      textEl.textContent = testimonials[index].text;
+      authorEl.textContent = testimonials[index].author;
+    }, 5000);
+  </script>
+  
 </body>
 </html>
